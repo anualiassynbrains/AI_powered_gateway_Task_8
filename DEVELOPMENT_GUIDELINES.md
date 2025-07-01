@@ -59,7 +59,5 @@ Environment & Dependencies
 
     ### How to run
 ```bash
-cd src
-cd costmanagement
-uvicorn main:app--reload
+uvicorn src.costmanagement.main:app--reload
 ```

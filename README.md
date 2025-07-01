@@ -75,7 +75,8 @@ Create a .env file in your root directory:
 
 ### How to run
 ```bash
-uvicorn src.costmanagement.main:app--reload
+uvicorn src.costmanagement.main:app --reload
+
 ```
 
 ### How it Works

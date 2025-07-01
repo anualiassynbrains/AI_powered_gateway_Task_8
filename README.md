@@ -1,12 +1,12 @@
-# 🧠 AI Powered Gateway – Task 8
+# AI Powered Gateway 
 
 A FastAPI-based service integrating Groq’s Llama models and Redis for cost‑aware, API-key-based text summarization.
 
 ---
 
-## 🌐 Features
+## Features
 
-- ✅ REST API endpoint (`/summarize`) that:
+- REST API endpoint (`/summarize`) that:
   - Accepts user input via POST
   - Uses **Groq Llama models** to:
     - Estimate cost (1–10)
@@ -15,7 +15,7 @@ A FastAPI-based service integrating Groq’s Llama models and Redis for cost‑a
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 This project follows a **two-model "gatekeeper" architecture**:
 
@@ -27,7 +27,7 @@ Performs the **actual summarization** of the text, only if the user has enough c
 
 ---
 
-## 🗃️ Role of Redis
+## Role of Redis
 
 - Redis is used for **stateful tracking** of **user credits**.
 - Each request is tied to an `X-API-Key` header.
@@ -40,14 +40,14 @@ Performs the **actual summarization** of the text, only if the user has enough c
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - ✅ A working **Groq API Key**
 - ✅ A **Redis instance** (local or free cloud-based)
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ```bash
 git clone https://github.com/yourusername/AI_powered_gateway_Task_8.git

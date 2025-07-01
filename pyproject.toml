@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "costmanagement"
+version = "0.1.0"
+description = "AI Powered Gateway"
+authors = ["anualiassynbrains <anu.alias@synbrains.ai>"]
+readme = "README.md"
+packages = [{include = "costmanagement", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.115.14"
+uvicorn = "^0.35.0"
+pydantic = "1.10.13"
+python-dotenv = "^1.1.1"
+groq = "^0.29.0"
+redis = "^6.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

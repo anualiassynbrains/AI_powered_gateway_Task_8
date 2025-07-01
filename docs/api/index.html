@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Summarization API Docs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #4A90E2;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 AI Summarization API</h1>
+
+    <div class="section">
+        <h2>📍 Endpoint</h2>
+        <p><code>POST /summarize</code></p>
+    </div>
+
+    <div class="section">
+        <h2>🔐 Headers</h2>
+        <pre>
+X-API-Key: your-api-key
+Content-Type: application/json
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>📤 Request Body</h2>
+        <p>JSON with one field:</p>
+        <pre>
+{
+  "text": "Your input text to summarize"
+}
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>📥 Response</h2>
+        <p>Returns the summary and credit usage info:</p>
+        <pre>
+{
+  "summary": "Concise summary of the input text.",
+  "cost": 4,
+  "remaining_credits": 96
+}
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>⚠️ Error Responses</h2>
+        <ul>
+            <li><code>429 Too Many Requests</code> – If not enough credits.</li>
+            <li><code>404 Not Found</code> – If input is missing or summarization fails.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>💡 Notes</h2>
+        <ul>
+            <li>Each request consumes 1–10 credits based on text complexity.</li>
+            <li>User balances are tracked in Redis using their API key.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Powered by FastAPI + Groq + Redis | Task 8</p>
+    </footer>
+</body>
+</html>
